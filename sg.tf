@@ -1,7 +1,7 @@
 resource "aws_security_group" "ami_backup" {
   name        = "ami_backup"
   description = "Allow ssh"
-  vpc_id      = "vpc-001deaaa131cf3847"
+  vpc_id      = var.vpc_id
 
   ingress {
     description      = "TLS from VPC"
